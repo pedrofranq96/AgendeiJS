@@ -1,0 +1,35 @@
+INSERT INTO public.appointments(
+	 id_doctor, id_service, id_user, booking_date, booking_hour)
+	VALUES ( 2, 5, 1, '2024-11-15', '9:00');
+	
+	select * from users
+	select * from doctors
+	select * from appointments
+	
+	select * from  doctors_services
+	select * from services
+	
+	select a.id_appointment, s.description as service, a.booking_date, a.booking_hour, d.name,d.specialty,u.name as user, ds.price  from appointments a
+	join services s on a.id_service = s.id_service
+	join doctors d on a.id_doctor = d.id_doctor
+	join users u on a.id_user = u.id_user
+    join doctors_services ds on a.id_doctor = ds.id_doctor and a.id_service = ds.id_service
+	where a.id_user = 4
+	order by a.booking_date, a.booking_hour
+	
+	select a.id_appointment, s.description as service, a.booking_date, a.booking_hour, d.name,d.specialty,u.name as user, ds.price  from appointments a
+	join services s on s.id_service = a.id_service
+	join doctors d on d.id_doctor = a.id_doctor
+	join users u on u.id_user = a.id_user
+	join doctors_services ds on ds.id_doctor = a.id_doctor and ds.id_service = a.id_service
+	where a.id_user = 1
+	order by a.booking_date, a.booking_hour
+	
+	
+	
+	select a.id_appointment, s.description as service, a.booking_date, a.booking_hour, d.name,d.specialty,u.name as user, ds.price  from appointments a
+               join services s on a.id_service = s.id_service
+               join doctors d on a.id_doctor = d.id_doctor
+               join users u on a.id_user = u.id_user
+               join doctors_services ds on a.id_doctor = ds.id_doctor and a.id_service = ds.id_service
+               where a.id_user = 1

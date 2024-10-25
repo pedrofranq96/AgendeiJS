@@ -9,7 +9,7 @@ export const styles = {
         borderColor: COLORS.gray4
     },
     name:{
-        fontSize: FONT_SIZE.md,
+        fontSize: FONT_SIZE.lg,
         colors: COLORS.gray1,
         marginBottom: 2,
     },

@@ -16,7 +16,7 @@ export const styles = {
 
     },
     input: {
-        backgroundColor: COLORS.gray5,
+        backgroundColor: COLORS.gray4,
         padding: 10,
         borderRadius: 6,
         marginBottom: 6

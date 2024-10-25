@@ -11,7 +11,7 @@ function Service(props){
                 <Text style={styles.price}>{ new Intl.NumberFormat("pt-BR", {style: "currency", currency: "BRL"}).format(props.price)}</Text>
             </View>
             <View style={styles.containerButton}>
-                <Button text="Agendar"/>
+                <Button text="Agendar" onPress={() => props.onPress(props.id_service)}/>
             </View>
         </View>
     )}

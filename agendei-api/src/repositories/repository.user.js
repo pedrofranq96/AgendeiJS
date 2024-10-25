@@ -42,7 +42,7 @@ async function Perfil(id_user) {
     let sql = "SELECT id_user, name, email  FROM users where id_user = $1 ";
 
     const user = await query(sql, [id_user]);
-    return user;
+    return user[0];
 }
 
 

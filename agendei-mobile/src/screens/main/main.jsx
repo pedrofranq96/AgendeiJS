@@ -1,4 +1,4 @@
-import { NavigationContainer } from "@react-navigation/native";
+
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Home from "../home/home";
 import Calendar from "../calendar/calendar";
@@ -10,7 +10,7 @@ const Tab = createBottomTabNavigator();
 
 function Main(){
     return (
-    <NavigationContainer>
+    
         <Tab.Navigator>
             <Tab.Screen name="Home" component={Home} options={{
                 headerTitleAlign: 'center',
@@ -30,7 +30,8 @@ function Main(){
                 tabBarIcon: ({focused}) => {
                     return <Image source={icon.calendar} style={{width: 25, height: 25, opacity: focused ? 0.3 : 1}}/>
                 },
-                tabBarShowLabel: false
+                tabBarShowLabel: false,
+                unmountOnBlur: true
             }}/>
             <Tab.Screen name="Profile" component={Profile} options={{
                 headerTitleAlign: 'center',
@@ -40,10 +41,11 @@ function Main(){
                 tabBarIcon: ({focused}) => {
                     return <Image source={icon.profile} style={{width: 25, height: 25, opacity: focused ? 0.3 : 1}}/>
                 },
-                tabBarShowLabel: false
+                tabBarShowLabel: false,
+                unmountOnBlur: true
             }}/>
         </Tab.Navigator>
-    </NavigationContainer>
+   
     
 )}
 

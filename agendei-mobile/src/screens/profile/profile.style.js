@@ -4,7 +4,9 @@ export const styles = {
     container: {
         backgroundColor: COLORS.white,
         flex: 1,
-        paddingTop: 12
+        paddingTop: 12,
+        
+        
     },
     item: {
         borderWidth: 1,
@@ -21,5 +23,6 @@ export const styles = {
     text:{
         fontSize: FONT_SIZE.md,
         colors: COLORS.gray1
-    },
+    }
+
 }

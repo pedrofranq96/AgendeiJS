@@ -14,13 +14,13 @@ export const styles = {
         borderRadius: 8
     },
     name:{
-        fontSize: FONT_SIZE.md,
+        fontSize: FONT_SIZE.sm,
         colors: COLORS.gray1,
-        marginTop: 5      
+        marginTop: 3     
     },
     specialty: {
         fontSize: FONT_SIZE.sm,
-        colors: COLORS.gray3     
+        colors: COLORS.blue   
     },
     icon: {
         width: 50,
