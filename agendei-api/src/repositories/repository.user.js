@@ -46,4 +46,13 @@ async function Perfil(id_user) {
 }
 
 
-export default {Inserir, ListarPorEmail, Perfil};
+async function Listar() {
+
+    let sql = "SELECT id_user, name, email  FROM users order by name";
+
+    const users = await query(sql, []);
+    return users;
+}
+
+
+export default {Inserir, ListarPorEmail, Perfil, Listar};

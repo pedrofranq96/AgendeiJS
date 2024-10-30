@@ -19,6 +19,7 @@ function Login(props){
 
             if(response.data){
                 api.defaults.headers.common['Authorization'] = "Bearer " + response.data.token;
+                console.log(response.data);
                 setUser(response.data);
             }
 
@@ -47,7 +48,9 @@ function Login(props){
             <TouchableOpacity onPress={() => props.navigation.navigate("account")}>
                 <Text style={styles.footerLink}>Criar conta agora.</Text>
             </TouchableOpacity>
+            
         </View>
+        <Text>versão 1.0</Text>
 
     </View>)
 }

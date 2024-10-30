@@ -59,51 +59,63 @@ export const doctors = [
 export const appointments = [
     {
         id_appointment: 1,
+        user: "Maira Silva",
         service: "Consulta",
         doctor: "Dra. Nise da Silveira",
         specialty: "Cirurgia Plástica",
         booking_date: "2024-10-25",
         booking_hour: "08:30",
+        price: 300
     },
     {
         id_appointment: 2,
+        user: "Heber Stein",
         service: "Consulta",
         doctor: "Dr. Antônio Almeida Souza",
         specialty: "Pediatria",
         booking_date: "2024-10-28",
         booking_hour: "15:40",
+        price: 250
     },
     {
         id_appointment: 3,
+        user: "João Andrade",
         service: "Consulta",
         doctor: "Dra. Roberta Martins",
         specialty: "Clínica Geral",
         booking_date: "2024-11-05",
         booking_hour: "14:15",
+        price: 500
     },
     {
         id_appointment: 4,
+        user: "Maira Silva",
         service: "Consulta",
         doctor: "Dra. Nise da Silveira",
         specialty: "Cirurgia Plástica",
         booking_date: "2024-11-18",
         booking_hour: "11:00",
+        price: 400
     },
     {
         id_appointment: 5,
+        user: "Heber Stein",
         service: "Consulta",
         doctor: "Dr. Antônio Almeida Souza",
         specialty: "Pediatria",
         booking_date: "2024-12-02",
         booking_hour: "10:40",
+        price: 500
     },
     {
         id_appointment: 6,
+        user: "Heber Stein",
         service: "Consulta",
         doctor: "Dra. Roberta Martins",
         specialty: "Clínica Geral",
         booking_date: "2024-12-14",
         booking_hour: "17:30",
+        price: 500
     }
 ]
 

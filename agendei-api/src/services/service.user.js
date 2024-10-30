@@ -34,4 +34,9 @@ async function Perfil(id_user){
     return user;
 }
 
-export default {Inserir, Login,Perfil};
+
+async function Listar(){
+    const users = await repoUser.Listar();
+    return users;
+}
+export default {Inserir, Login,Perfil,Listar};

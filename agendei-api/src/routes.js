@@ -3,6 +3,7 @@ import { Router } from "express";
 import controllerDoctor from "./controllers/controller.doctor.js";
 import controllerUser from "./controllers/controller.user.js";
 import controllerAppointment from "./controllers/controller.appointment.js";
+import controllerAdmin from "./controllers/controller.admin.js";
 import token from "./token.js";
 
 const router = Router();
@@ -17,11 +18,19 @@ router.post("/users/register", controllerUser.Inserir);
 router.post("/users/login", controllerUser.Login);
 router.get("/users/profile",token.ValidateToken, controllerUser.Perfil);
 
+router.post("/admin/register", controllerAdmin.InserirAdmin);
+router.post("/admin/login", controllerAdmin.LoginAdmin);
+router.get("/admin/appointments",token.ValidateToken, controllerAppointment.Listar);
+router.get("/admin/users",token.ValidateToken, controllerUser.Listar);
+router.get("/admin/appointments/:id_appointment",token.ValidateToken, controllerAppointment.ListarId);
+router.post("/admin/appointments",token.ValidateToken, controllerAppointment.InserirAppointmentAdmin);
+router.put("/admin/appointments/:id_appointment",token.ValidateToken, controllerAppointment.EditarAppointmentAdmin);
+
 router.get("/appointments",token.ValidateToken, controllerAppointment.Listar);
 router.post("/appointments",token.ValidateToken, controllerAppointment.Inserir);
 router.delete("/appointments/:id_appointment",token.ValidateToken, controllerAppointment.Excluir);
 
-
+ 
 export default router;
 
 
